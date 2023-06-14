@@ -13,16 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_Style_Template_Homework
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+namespace WPF_Style_Template_Homework {
+    public partial class MainWindow : Window {
+        public MainWindow() {
             InitializeComponent();
+        }
+
+        private void RichTextBox_GotFocus(object sender, RoutedEventArgs e) {
+            richtext1box.Selection.Select(richtext1box.Document.ContentStart, richtext1box.Document.ContentEnd);
+            richtext1box.Selection.Text = " TextBox Multiline";
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e) {
+            richtext1box.Selection.Select(richtext1box.Document.ContentStart, richtext1box.Document.ContentEnd);
+            richtext1box.Selection.Text = " TextBox Multiline";
         }
     }
 }

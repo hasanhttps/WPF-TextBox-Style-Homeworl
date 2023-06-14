@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Style_Template_Homework"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="349" Width="647" Background="#2C2B57">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,8 +16,14 @@
         <TextBox Grid.Column="0" Template="{DynamicResource circularTextBox}" Height="25" Width="200" BorderBrush="#BA5B6B" BorderThickness="2" Foreground="#ADABAA" Text=" Password" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,70,0,0"/>
         <TextBox Grid.Column="0" Template="{DynamicResource circularTextBox}" Height="25" Width="200" BorderBrush="#BBA763" BorderThickness="1.3" Text="" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,110,0,0"/>
         <TextBox Grid.Column="0" Template="{DynamicResource circularTextBox}" Height="25" Width="200" BorderBrush="#BBA763" BorderThickness="1.3" Text="" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,150,0,0"/>
-        <TextBox Grid.Column="0" Template="{DynamicResource circularTextBox}" Height="25" Width="200" BorderBrush="Transparent" Foreground="#ADABAA" BorderThickness="1.3" Text="RJCode" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,190,0,0"/>
-        <PasswordBox Grid.Column="0" Template="{DynamicResource transparentPasswordBox}" Height="25" Width="200" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Left" Margin="40,230,0,0"/>
-        <TextBox Grid.Column="1" Template="{DynamicResource circular2TextBox}" Height="25" Width="200" BorderBrush="#4466D5" BorderThickness="2" Foreground="#ADABAA" Text=" admin" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,30,0,0"/>
+        <TextBox Grid.Column="0" Template="{DynamicResource circular2TextBox}" Height="28" Width="200" BorderBrush="Transparent" Foreground="#ADABAA" BorderThickness="1.3" Text="RJCode" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,190,0,0"/>
+        <PasswordBox Grid.Column="0" Template="{DynamicResource transparentPasswordBox}" Height="28" Width="200" VerticalAlignment="Top" Foreground="White" HorizontalAlignment="Left" Margin="40,230,0,0"/>
+        
+        <!--Grid.Column 2-->
+
+        <TextBox Grid.Column="1" Template="{DynamicResource circular3TextBox}" Height="25" Width="200" BorderBrush="#4467D3" BorderThickness="2" Foreground="#ADABAA" Text=" admin" FontSize="16" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,30,0,0"/>
+        <PasswordBox Grid.Column="1" Template="{DynamicResource transparent2PasswordBox}" Height="25" Width="200" VerticalAlignment="Top" BorderBrush="#DA812D" Foreground="White" HorizontalAlignment="Left" Margin="40,70,0,0"/>
+        <RichTextBox Grid.Column="1" Name="richtext1box" Template="{DynamicResource circularRichTextBox}" Height="150" Width="200" Foreground="#777DE6" BorderBrush="#777DE6" BorderThickness="1.3" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,110,0,0" GotFocus="RichTextBox_GotFocus"/>
+
     </Grid>
 </Window>

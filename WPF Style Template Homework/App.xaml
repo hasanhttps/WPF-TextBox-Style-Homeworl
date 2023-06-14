@@ -20,7 +20,7 @@
         <ControlTemplate TargetType="TextBox" x:Key="circular2TextBox">
             <StackPanel>
                 <Border Background="Transparent"
-                        CornerRadius="10"
+                        CornerRadius="5"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"/>
                 <TextBox Background="Transparent"
@@ -31,25 +31,57 @@
             </StackPanel>
         </ControlTemplate>
 
+        <ControlTemplate TargetType="TextBox" x:Key="circular3TextBox">
+            <Grid>
+                <Border Background="Transparent"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"/>
+                <TextBox Background="Transparent"
+                         BorderBrush="Transparent"
+                         Foreground="{TemplateBinding Foreground}"
+                         Text="{TemplateBinding Text}"/>
+            </Grid>
+        </ControlTemplate>
+
         <ControlTemplate TargetType="PasswordBox" x:Key="transparentPasswordBox">
             <StackPanel>
                 <PasswordBox Background="Transparent"
                          Foreground="{TemplateBinding Foreground}"
-                         Padding="5"/>
+                         BorderThickness="0"
+                         Padding="5">
+                </PasswordBox>
                 <Line Stroke="Aqua" StrokeThickness="1" X1="0" X2="200" ></Line>
             </StackPanel>
         </ControlTemplate>
 
         <ControlTemplate TargetType="PasswordBox" x:Key="transparent2PasswordBox">
-            <StackPanel>
+            <Grid>
                 <Border Background="Transparent"
                         CornerRadius="10"
-                        BorderBrush="#DA812D"/>
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1"/>
                 <PasswordBox Background="Transparent"
+                             BorderBrush="Transparent"
                              Foreground="{TemplateBinding Foreground}"
                              Padding="5"/>
-                
-            </StackPanel>
+            </Grid>
         </ControlTemplate>
+
+        <ControlTemplate TargetType="RichTextBox" x:Key="circularRichTextBox">
+            <Grid>
+                <Border 
+                        Background="Transparent"
+                        CornerRadius="5"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"/>
+                <RichTextBox 
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Foreground="{TemplateBinding Foreground}">
+                </RichTextBox>
+            </Grid>
+        </ControlTemplate>
+        
     </Application.Resources>
 </Application>
