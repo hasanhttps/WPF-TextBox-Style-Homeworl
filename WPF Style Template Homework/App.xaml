@@ -1,0 +1,55 @@
+﻿<Application x:Class="WPF_Style_Template_Homework.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_Style_Template_Homework"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate TargetType="TextBox" x:Key="circularTextBox">
+            <Grid>
+                <Border Background="Transparent"
+                        CornerRadius="5"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"/>
+                <TextBox Background="Transparent"
+                         BorderBrush="Transparent"
+                         Foreground="{TemplateBinding Foreground}"
+                         Text="{TemplateBinding Text}"/>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate TargetType="TextBox" x:Key="circular2TextBox">
+            <StackPanel>
+                <Border Background="Transparent"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"/>
+                <TextBox Background="Transparent"
+                         BorderBrush="Transparent"
+                         Foreground="{TemplateBinding Foreground}"
+                         Text="{TemplateBinding Text}"/>
+                <Line Stroke="Aqua" StrokeThickness="1" X1="0" X2="200" ></Line>
+            </StackPanel>
+        </ControlTemplate>
+
+        <ControlTemplate TargetType="PasswordBox" x:Key="transparentPasswordBox">
+            <StackPanel>
+                <PasswordBox Background="Transparent"
+                         Foreground="{TemplateBinding Foreground}"
+                         Padding="5"/>
+                <Line Stroke="Aqua" StrokeThickness="1" X1="0" X2="200" ></Line>
+            </StackPanel>
+        </ControlTemplate>
+
+        <ControlTemplate TargetType="PasswordBox" x:Key="transparent2PasswordBox">
+            <StackPanel>
+                <Border Background="Transparent"
+                        CornerRadius="10"
+                        BorderBrush="#DA812D"/>
+                <PasswordBox Background="Transparent"
+                             Foreground="{TemplateBinding Foreground}"
+                             Padding="5"/>
+                
+            </StackPanel>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>
